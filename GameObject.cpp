@@ -9,6 +9,17 @@ std::ostream& operator<<(std::ostream& out, const GameObject& obj) {
     return out;
 }
 
+bool operator==(const GameObject &a, const GameObject &b)
+{
+    return (a.x == b.x && a.y == b.y);
+}
+
+std::string stringify(const GameObject& obj) {
+    std::string result = obj.name + "#" + std::to_string(obj.health) + "#" + std::to_string(obj.x) + "#"
+        + std::to_string(obj.y) + "#" + std::to_string(obj.animationFrame);
+    return result;
+}
+
 GameObject::GameObject(std::string nme, int hlth, float xpos, float ypos, int frame)
     : name(nme), health(hlth), x(xpos), y(ypos), animationFrame(frame) {}
 

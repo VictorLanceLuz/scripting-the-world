@@ -17,4 +17,6 @@ public:
     void move(float dx, float dy);
     void takeDamage(int amount); 
     friend class ScriptEngine; 
+    friend bool operator==(const GameObject& a, const GameObject& b);
+    friend std::string stringify(const GameObject& obj);
 };
