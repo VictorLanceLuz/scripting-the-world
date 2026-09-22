@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <ostream>
 #include "ScriptEngine.hpp"
 #include "Position.hpp"
 
@@ -11,7 +12,7 @@ private:
     float y;
     int animationFrame;
 public:
-    friend ostream& operator<<(ostream& out, const GameObject& obj);
+    friend std::ostream& operator<<(std::ostream& out, const GameObject& obj);
     GameObject(std::string nme, int hlth, float xpos, float ypos, int frame); 
     void move(float dx, float dy);
     void takeDamage(int amount); 
