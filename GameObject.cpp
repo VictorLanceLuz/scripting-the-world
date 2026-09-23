@@ -9,9 +9,12 @@ std::ostream& operator<<(std::ostream& out, const GameObject& obj) {
     return out;
 }
 
-bool operator==(const GameObject &a, const GameObject &b)
-{
+bool operator==(const GameObject &a, const GameObject &b) {
     return (a.x == b.x && a.y == b.y);
+}
+
+bool operator==(const Position& pos, const GameObject& obj) {
+    return (pos.x == obj.x && pos.y == obj.y);
 }
 
 std::string stringify(const GameObject& obj) {
