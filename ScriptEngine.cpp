@@ -14,5 +14,5 @@ void ScriptEngine::heal(GameObject& obj, int amount) {
 
 void ScriptEngine::advanceAnimation(GameObject& obj) {
     obj.animationFrame++;
-    std::cout << "[ScriptEngine] Animation frame advanced to: " << obj.animationFrame; 
+    std::cout << "[ScriptEngine] Animation frame advanced to: " << obj.animationFrame << std::endl; 
 }
